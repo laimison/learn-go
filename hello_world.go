@@ -11,5 +11,5 @@ func example(my_variable string) string {
 }
 
 func main() {
-  fmt.Print(example("Hello World\n"))
+  fmt.Println(example("Hello World"))
 }
