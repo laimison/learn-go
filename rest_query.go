@@ -9,9 +9,10 @@ import (
   "log"
   "io/ioutil"
   "encoding/json"
+  _ "strconv"
 )
 
-func rest_query(method string, address string, user string, pass string) string {
+func rest_query(method string, address string, user string, pass string) (string, string) {
   // Using http with timeout
   var client_timeout = &http.Client{
     Timeout: time.Second * 10,
@@ -36,18 +37,40 @@ func rest_query(method string, address string, user string, pass string) string 
   // Write the output to memory
   bodyText, error := ioutil.ReadAll(response.Body)
 
+  // Define JSON structure
+  type MyStructure struct {
+    id int
+  }
+
   // Getting the output
-  var result map[string]interface{}
+  // Method 1
+  var result MyStructure
+  // Method 2
+  // var result map[string]interface{}
+
   json.Unmarshal([]byte(bodyText), &result)
 
-  content := string(bodyText)
-  return content
+  // Method 1
+  // my_variable := strconv.Itoa(result.id)
+  // my_variable2 := strconv.Itoa(result.id)
+
+  // Method 1 A
+  // my_variable := ""
+  // my_variable2 := ""
+
+  // Method 2
+  my_variable := string(bodyText)
+  my_variable2 := ""
+
+  return my_variable, my_variable2
 }
 
 func main() {
   // Json starting with [
-  fmt.Println(rest_query("GET", "https://jsonplaceholder.typicode.com/posts", "", ""))
+  // fmt.Println(rest_query("GET", "https://jsonplaceholder.typicode.com/users", "", ""))
 
   // Json starting with {
-  fmt.Println(rest_query("GET", "https://jsonplaceholder.typicode.com/todos/1", "", ""))
+  fmt.Println(rest_query("GET", "https://jsonplaceholder.typicode.com/users/1", "", ""))
+
+
 }
