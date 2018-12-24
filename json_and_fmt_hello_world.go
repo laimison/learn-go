@@ -1,5 +1,8 @@
 //usr/bin/env go run "$0" "$@"; exit
 
+// Great tutorial to begin with different examples to learn JSON parsing
+// https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/
+
 // Unstructured JSON example
 //
 // As a general rule of thumb,
