@@ -7,7 +7,6 @@ import (
   "encoding/json"
 )
 
-// Just do not warn about unused fmt
 var _ = fmt.Printf
 
 func example() (string, string) {
