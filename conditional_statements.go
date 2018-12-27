@@ -36,5 +36,8 @@ func main() {
   }
   fmt.Println(sum)
 
+  // infinite loop
+  // for {
+  // }
 
 }
