@@ -36,6 +36,10 @@ Reopen your terminal and try it
 
 `git_push updated array \& simplified a function`
 
+### VIM in color for Mac only
+
+`grep -e 'filetype plugin indent on' -e 'syntax on' -e 'color desert' ~/.vimrc | wc -l | awk -F ' ' '{print $1}' | grep -Evq "^(0|1|2)$" && printf "\nfiletype plugin indent on\nsyntax on\ncolor desert\n" >> ~/.vimrc`
+
 ## References
 
 Parsing json in Golang includes multiple cases (for example JSON Arrays, etc.) [https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)
