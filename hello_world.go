@@ -6,6 +6,8 @@ import (
   "fmt"
 )
 
+var _ = fmt.Printf
+
 func example(my_variable string) string {
   return my_variable
 }
