@@ -10,7 +10,7 @@ This is a repository to learn Go from the beginning or get back if something is 
 
 ### See full path in your terminal
 
-`echo "export PS1='\e[36;1m\u:\e[0m\w$ '"`
+`grep -qE 'export.*PS1=' ~/.bash_profile || echo "export PS1='\e[36;1m\u:\e[0m\w$ '" >> ~/.bash_profile`
 
 ### Loop My Script
 
