@@ -28,7 +28,7 @@ Reopen your terminal and try it
 
 Add this function to your user's profile
 
-``grep -qE 'git_push.*().*{' ~/.bash_profile || echo 'git_push () { echo $* | grep [a-zA-Z] && echo "Pushing as `git config user.name` in 5 seconds (CTRL+C to decline) ..." && sleep 5 && git config --global push.default current && git add --all && git commit -m "$*" && git push ; }' >> ~/.bash_profile``
+``grep -qE 'git_push.*().*{' ~/.bash_profile || echo 'git_push () { git status && echo $* | grep [a-zA-Z] && echo "Pushing as `git config user.name` in 5 seconds (CTRL+C to decline) ..." && sleep 5 && git config --global push.default current && git add --all && git commit -m "$*" && git push ; }' >> ~/.bash_profile``
 
 Reopen your terminal and try it
 
