@@ -44,10 +44,10 @@ func main() {
   fmt.Println(slice3) // -> [2 3 4]
 
   // Maps are a data type in Go, which maps keys to values. We can define a map using the following command
-  var m map[string]int
+  // var m map[string]int
   // adding key/value
-  m['simplicity'] = 3
+  // m['simplicity'] = 3
   // printing the values
-  fmt.Println(m['clearity']) // -> 2
-  fmt.Println(m['simplicity']) // -> 3
+  // fmt.Println(m['clearity']) // -> 2
+  // fmt.Println(m['simplicity']) // -> 3
 }
