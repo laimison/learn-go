@@ -36,7 +36,7 @@ Reopen your terminal and try it
 
 `git_push updated array \& simplified a function`
 
-### VIM in color for Mac only
+### VIM colors for Mac only
 
 `grep -e 'filetype plugin indent on' -e 'syntax on' -e 'color desert' ~/.vimrc | wc -l | awk -F ' ' '{print $1}' | grep -Evq "^(0|1|2)$" && printf "\nfiletype plugin indent on\nsyntax on\ncolor desert\n" >> ~/.vimrc`
 
