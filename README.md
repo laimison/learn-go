@@ -1,6 +1,6 @@
 # learn-go
 
-This is a repository to learn Go from the beginning or get back later if something is forgotten in the future
+This is a repository to learn Go from the beginning or get back if something is forgotten in the future
 
 ## Some tips on Mac OS or Windows GIT Bash
 
