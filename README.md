@@ -10,7 +10,7 @@ This is a repository to learn Go from the beginning or get back if something is 
 
 ### See full path in your terminal
 
-`grep -qE 'export.*PS1=' ~/.bash_profile || echo "export PS1='\e[36;1m\u:\e[0m\w$ '" >> ~/.bash_profile`
+`grep -qE 'export.*PS1=' ~/.bash_profile || echo "export PS1='\h:\w \u\$ '" >> ~/.bash_profile`
 
 ### Loop My Script
 
@@ -38,7 +38,7 @@ Reopen your terminal and try it
 
 ### VIM colors for Mac only
 
-`grep -e 'filetype plugin indent on' -e 'syntax on' -e 'color desert' ~/.vimrc | wc -l | awk -F ' ' '{print $1}' | grep -Evq "^(0|1|2)$" || printf "\nfiletype plugin indent on\nsyntax on\ncolor desert\n" >> ~/.vimrc`
+`touch ~/.vimrc; grep -e 'filetype plugin indent on' -e 'syntax on' -e 'color desert' ~/.vimrc | wc -l | awk -F ' ' '{print $1}' | grep -Evq "^(0|1|2)$" || printf "\nfiletype plugin indent on\nsyntax on\ncolor desert\n" >> ~/.vimrc`
 
 ## References
 
